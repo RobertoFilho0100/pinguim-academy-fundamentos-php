@@ -12,13 +12,13 @@
             <a href="for.php">For</a>
         </li>
         <li>
-            <a href="foreach.php">For</a>
+            <a href="foreach.php">Foreach</a>
         </li>
         <li>
-            <a href="while.php">For</a>
+            <a href="while.php">While</a>
         </li>
         <li>
-            <a href="do-while.php">For</a>
+            <a href="do-while.php">Do/While</a>
         </li>
     </ul>
 </body>
