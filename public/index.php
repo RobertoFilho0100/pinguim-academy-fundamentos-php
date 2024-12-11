@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use App\Greetings;
-use App\Logger;
+use App\Models\Product;
 
-$message = new Greetings();
-echo $message->greeting("Roberto");
+$title = 'My WebStore';
 
-echo '<br>';
-echo '<br>';
+$products = Product::all();
 
-(new Logger())->write("John Doe accessed the application");
+$filteredProducts = array_filter($products, static fn(array $product) => $product['is_available']);
+
+require __DIR__ . '/../resource/views/index.phtml';
