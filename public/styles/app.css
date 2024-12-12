@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+    background-color: #f3f4f6;
+}
+
+body {
+    height: 100%;
+    margin: 0 !important;
+}
+
+.min-h-full {
+    min-height: 100%;
+}
+
+nav {
+    background-color: #1f2937;
+}
+
+nav > .nav-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+nav > .nav-wrapper > div {
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.nav-items {
+    margin-left: 2.5rem;
+    align-items: baseline;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
