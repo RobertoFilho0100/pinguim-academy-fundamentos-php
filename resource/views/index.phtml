@@ -3,15 +3,18 @@
     <head>
         <?php include __DIR__ . '/includes/head.phtml' ?>
     </head>
+
     <body>
-    <h1>Products Available</h1>
-    <ul>
-        <?php foreach ($filteredProducts as $product) : ?>
-            <li>
-                <strong><?= $product['name'] ?></strong>
-                <strong><?= $product['price'] ?></strong>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+        <div class="min-h-full">
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="flex items-center">
+                        <a href="/">Home</a>
+                        <a href="/products">Products</a>
+                        <a href="/contact">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </body>
 </html>
