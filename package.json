@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "npx mix watch",
+    "prod": "npx mix --production"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "laravel-mix": "^6.0.49",
