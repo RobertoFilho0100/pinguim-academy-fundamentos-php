@@ -6,7 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use App\Models\Product;
 
-$title = 'My WebStore';
+$title = 'Contacts';
 
 $products = Product::all();
 
