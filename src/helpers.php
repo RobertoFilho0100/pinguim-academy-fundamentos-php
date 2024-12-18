@@ -15,7 +15,7 @@ if (!function_exists('mix')) {
             throw new RuntimeException("The mix manifest does not exist");
         }
 
-        $content = file_get_contents(__DIR__ . './../public/mix-manifest.json');
+        $content = file_get_contents(base_path('public/mix-manifest.json'));
         $content = json_decode($content, true);
 
         return $content[$path] ?? '';
