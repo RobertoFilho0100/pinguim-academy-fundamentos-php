@@ -11,6 +11,5 @@ $heading = 'Home';
 
 $products = Product::all();
 
-$filteredProducts = array_filter($products, static fn(array $product) => $product['is_available']);
 
 require __DIR__ . '/../resources/views/index.php';
