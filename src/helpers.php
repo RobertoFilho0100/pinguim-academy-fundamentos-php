@@ -27,3 +27,13 @@ if (!function_exists('resource_path')) {
         return base_path('resource'. DIRECTORY_SEPARATOR . $path);
     }
 }
+
+if(!function_exists('dd')) {
+    function dd(...$args): void {
+        echo '<pre>';
+        foreach ($args as $arg) {
+            print_r($arg);
+        }
+        die();
+    }
+}
