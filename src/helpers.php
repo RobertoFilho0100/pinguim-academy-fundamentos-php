@@ -24,7 +24,7 @@ if (!function_exists('mix')) {
 
 if (!function_exists('resource_path')) {
     function resource_path(string $path): string {
-        return base_path('resource'. DIRECTORY_SEPARATOR . $path);
+        return base_path('resources'. DIRECTORY_SEPARATOR . $path);
     }
 }
 
