@@ -37,3 +37,11 @@ if(!function_exists('dd')) {
         die();
     }
 }
+
+if(!function_exists('abort')) {
+    function abort(int $code = 404) {
+        http_response_code($code);
+        require resource_path('views/'. $code . '.php');
+        die();
+    }
+}
