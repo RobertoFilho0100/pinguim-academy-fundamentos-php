@@ -45,3 +45,12 @@ if(!function_exists('abort')) {
         die();
     }
 }
+
+if(!function_exists('route_is')) {
+    function route_is(string $route): bool {
+        $uri = $_SERVER['REQUEST_URI'];
+        $uri = parse_url($uri, PHP_URL_PATH);
+
+        return $uri === $route;
+    }
+}
