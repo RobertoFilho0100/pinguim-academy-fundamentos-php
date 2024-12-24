@@ -2,14 +2,15 @@
 
 declare(strict_types=1);
 
+use Core\Database\Connector;
+
 $title = 'My Webstore';
 $heading = 'Home';
 
-$pdo = (new \Core\Database\Connector())->connect();
+$db = new Connector();
 
-$statement = $pdo->prepare('SELECT * FROM products;');
-$statement->execute();
-
-$products = $statement->fetchAll(\PDO::FETCH_ASSOC);
+$products = (new Connector())
+    ->query("SELECT * FROM products")
+    ->get();
 
 require resource_path('views/index.php');

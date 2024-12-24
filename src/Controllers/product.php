@@ -1,15 +1,14 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
-$title = 'My Webstore';
-$heading = 'Home';
+use Core\Database\Connector;
 
-$pdo = (new \Core\Database\Connector())->connect();
+$product = (new Connector())
+    ->query('SELECT * FROM products where id = 1')
+    ->first();
 
-$statement = $pdo->prepare('SELECT * FROM products WHERE id = 1;');
-$statement->execute();
-
-$products = $statement->fetchAll(\PDO::FETCH_ASSOC);
+$title = $product->name . ' | My Webstore';
+$heading = 'Product Details';
 
 require resource_path('views/product.php');
