@@ -7,8 +7,8 @@
     <ul>
         <?php foreach ($products as $product): ?>
             <li>
-                <a href="/products?id=<?= $product['id'] ?>">
-                    <?= $product['name'] ?> - <?= format_money($product['price']) ?>
+                <a href="/product?id=<?= $product->id ?>">
+                    <?= $product->name ?> - <?= format_money($product->price) ?>
                 </a>
             </li>
         <?php endforeach; ?>
